@@ -1,0 +1,178 @@
+.game
+    width: 100vw
+    height: 100vh
+    background-image: url('../assets/background.jpg')
+    background-size: auto 100%
+    display: flex
+    align-items: center
+    position: relative
+    .wrapper
+        margin: 0 0 0 20%
+        display: flex
+        .col
+            &:nth-child(2)
+                position: relative
+                .btn
+                    position: absolute
+                    left: 10%
+                    bottom: 215px
+    .torch
+        width: 384px
+        height: 579px
+        background-image: url('../assets/torch.png')
+        background-size: contain
+        position: absolute
+        top: 200px
+        left: 0   
+    #canvas
+        position: absolute
+        top: 0
+        left: 100px
+    .logo
+        margin: 20px 0 0 0
+    .list
+        width: 515px
+        height: 515px
+        margin: 10px 0 0 0
+        padding: 1%
+        background-image: url('./../assets/table.png')
+        background-size: cover
+        display: flex
+        align-content: space-between
+        justify-content: space-between
+        flex-wrap: wrap
+        div
+            width: 30%
+            height: 30%
+            margin: 1%
+            background: transparent
+            background-image: url('./../assets/chest.png')
+            background-position: center
+            background-repeat: no-repeat
+            pointer-events: none
+            transition: 0.3s
+            &.empty
+                background-image: url('./../assets/chest_empty.png')
+            &.empty_done
+                background-image: url('./../assets/chest_empty_done.png')
+            &.treasure
+                background-image: url('./../assets/chest_treasure.png')
+            &.treasure_done
+                background-image: url('./../assets/chest_treasure_done.png')
+    .subtext
+        margin: 10px 0 0 0
+        color: #ffffff
+        font-size: 16px
+        line-height: 20px
+        font-weight: 400
+        font-family: $ptSanc
+        text-align: center
+        filter: drop-shadow(0 0 16px #1f2020)
+    .dwarf
+        margin: 0 0 0 -25px
+    .message
+        width: 405px
+        height: 400px
+        padding: 165px 95px 140px 15px
+        background-image: url('./../assets/alert.png')
+        display: flex
+        position: absolute
+        top: 165px
+        left: 0
+        p
+            margin: auto
+            color: #333333
+            font-size: 21px
+            line-height: 22px
+            color: #333333
+            font-family: $aBremenCaps
+            text-align: center
+    .dashboard
+        height: 100vh
+        width: 37vw
+        background-image: url('./../assets/right.png')
+        position: fixed
+        top: 0
+        right: 0
+        &-panel
+            width: 273px
+            height: 508px
+            padding: 0 20px
+            background-image: url('./../assets/dashboard.png')
+            background-size: cover
+            position: absolute
+            top: calc(50% - 375px + 94px)
+            left: 75px
+        .title
+            width: 100%
+            height: 105px
+            background-image: url('./../assets/dashboard_title.png')
+            background-repeat: no-repeat
+            background-position: 50% 80%
+        .cost
+            margin: 4px 0 0 0
+            color: #bab6b6
+            font-size: 15px
+            line-height: 31px
+            font-family: $aBremenCaps
+        .text
+            margin: 25px 0 0 0
+            color: #ffffff
+            font-size: 18px
+            line-height: 36px
+            font-family: $aBremenCaps
+            text-transform: uppercase
+            &:last-of-type
+                margin: 35px 0 0 0
+        .row
+            margin: 3px 0 0 0
+            display: flex
+            align-items: flex-end
+            p
+                &:nth-child(1)
+                    margin: 0 10px 0 0
+                    color: #a3a09f
+                    font-size: 15px
+                    line-height: 34px
+                    font-family: $aBremenCaps
+                    text-transform: uppercase
+                &:nth-child(2)
+                    margin: 0 10px 0 auto
+                    color: #fec602
+                    font-size: 30px
+                    font-family: $aBremenCaps
+                    text-align: right
+            div
+                width: 14px
+                &.arrows
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-around
+                    div
+                        width: 14px
+                        height: 8px
+                        background-image: url('./../assets/arrow_grey.png')
+                        background-size: cover
+                        cursor: pointer
+                        &.top
+                            margin: 0 0 8px 0
+                            transform: rotate(180deg)
+                            background-position: 1px 0
+                            &:hover
+                                transform: rotate(0deg)
+                        &.bottom
+                            margin: 0 0 4px 0
+                            &:hover
+                                transform: rotate(180deg)
+                                background-position: 1px 0
+                        &:hover
+                            background-image: url('./../assets/arrow_white.png')
+                &.currency
+                    color: #959392
+                    font-size: 24px
+                    line-height: 32px
+                    font-family: $aBremenCaps
+                    text-transform: uppercase
+                    text-align: right
+        .btn
+            margin: 20px 0 0 0

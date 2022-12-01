@@ -1,0 +1,57 @@
+body 
+    &.scrollock 
+        overflow-y: hidden 
+.modal 
+    width: 100vw 
+    height: 100vh 
+    background-color: rgba(35, 35, 35, 0.3) 
+    overflow-y: auto 
+    position: fixed 
+    z-index: 200 
+    top: 0 
+    left: 0 
+    display: none 
+    &.show 
+        display: block 
+.modal__content 
+    min-height: 100% 
+    display: flex 
+    align-items: center 
+    justify-content: center 
+.modal__close 
+    width: 24px 
+    height: 24px 
+    position: absolute 
+    top: 24px 
+    right: 28px 
+    background-image: url('./../assets/close.svg') 
+    background-size: cover 
+    cursor: pointer 
+.fade-in 
+    animation: 0.3s linear fadeIn 
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+.fade-out 
+    animation: 0.3s linear fadeOut 
+@keyframes fadeOut
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+        
+.m-message 
+    width: 100% 
+    max-width: 600px 
+    margin: 40px 
+    background-color: #b8b8b8 
+    padding: 90px 
+    position: relative 
+    .title
+        color: #333333
+        font-size: 26px
+        line-height: 30px
+        font-weight: 700
+        font-family: $ptSanc
