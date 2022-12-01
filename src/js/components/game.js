@@ -37,9 +37,6 @@ const Game = {
             document.querySelector('.m-message .title').innerHTML = 'Не повезло! Попробуйте еще раз'
         }
         window.openPopup('message')
-        setTimeout(() => {
-            window.closePopup('message')
-        }, 3000)
         this.chest = !this.chest
         this.chestAnimation(chest, selector)
         this.chestsDisable()
